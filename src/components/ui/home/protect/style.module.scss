@@ -1,0 +1,25 @@
+.wrapper {
+  @apply pt-60 tablet:py-0 bg-black flex justify-center relative;
+
+  .context {
+    @apply max-w-screen-desktop w-full flex justify-center flex-col items-center relative;
+
+    .title {
+      @apply font-semibold text-32 tablet:text-52 leading-9 tablet:leading-67 z-20;
+    }
+
+    .description {
+      @apply font-medium text-lg mt-5 max-w-[335px] tablet:max-w-[476px] w-full text-center z-20;
+    }
+    .image {
+      @apply z-20 mt-10 px-5 w-[80%] tablet:px-0;
+    }
+  }
+  .background {
+    @apply absolute top-0 left-0 z-10 w-full h-full;
+  }
+}
+
+.secondWrapper {
+  @apply bg-black py-50 px-5 tablet:px-0  flex flex-col items-center justify-center gap-60 border-none;
+}

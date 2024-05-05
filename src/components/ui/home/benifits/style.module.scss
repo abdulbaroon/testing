@@ -1,0 +1,102 @@
+.wrapper {
+    @apply max-w-screen-desktop mx-auto relative mt-10 tablet:mt-40;
+
+    .desktopHeading {
+        @apply hidden desktop:block text-3xl text-center text-black font-medium;
+    }
+
+    .desktop {
+        @apply hidden px-5 py-24 ;
+
+        @screen tablet {
+            @apply grid grid-cols-2 gap-5;
+        }
+
+        @screen desktop {
+            @apply grid-cols-3 gap-10;
+        }
+
+        .tabletHeading {
+            @apply block desktop:hidden text-3xl text-black font-medium;
+        }
+    
+        .gridItem {
+            @apply relative;
+    
+            .gridItemContents {
+                @apply p-8 bg-white rounded-3xl relative z-10;
+    
+                @screen tablet {
+                    @apply absolute inset-0 py-8 pl-7 pr-32 bg-transparent;
+                }
+
+                &.rightMode {
+                    @screen tablet {
+                        @apply pr-7 pl-32;
+                    }
+                }
+
+                .itemHeader {
+                    @apply flex items-center justify-between min-h-[72px];
+
+                    .title {
+                        @apply text-primary text-3xl font-medium;
+                    }
+        
+                    .icon {
+                        @apply text-white;
+                    }
+                }
+    
+    
+                .description {
+                    @apply text-black max-w-full mt-6 tablet:mt-16;
+                }
+            }
+    
+            .background {
+                @apply hidden tablet:block;
+
+                &.rightMode {
+                    @apply  -scale-x-100;
+                }
+            }
+        }
+    }
+
+    .mobile {
+        @apply block tablet:hidden text-black py-12 mb-24;
+
+        .heading {
+            @apply text-2xl font-semibold text-center;
+        }
+
+        .carousel {
+            @apply mt-10 px-[20px];
+
+            .gridItem {
+                @apply w-[280px];
+        
+                .gridItemContents {
+                    @apply static p-8 bg-white rounded-3xl h-full;
+        
+                    .itemHeader {
+                        @apply flex items-start justify-between min-h-[72px];
+
+                        .title {
+                            @apply text-primary text-3xl font-medium;
+                        }
+            
+                        .icon {
+                            @apply text-white;
+                        }
+                    }
+        
+                    .description {
+                        @apply text-black text-base max-w-full mt-6 min-h-[72px] ltr:text-left rtl:text-right;
+                    }
+                }
+            }
+        }
+    }
+}

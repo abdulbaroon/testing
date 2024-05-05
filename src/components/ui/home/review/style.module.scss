@@ -1,0 +1,26 @@
+.wrapper {
+  @apply bg-black relative flex flex-col items-center gap-10 pt-60 tablet:pt-[120px] pb-10;
+
+  .background {
+    @apply absolute top-0 left-0 w-full h-full scale-150;
+  }
+  .context {
+    @apply max-w-screen-desktop w-full flex justify-center flex-col items-center gap-5;
+
+    .title {
+      @apply font-semibold text-28 tablet:text-52 tablet:leading-67 relative z-30;
+    }
+
+    .description {
+      @apply font-medium text-18 leading-[26px] tablet:leading-[26px] relative z-30 text-lightGrey ;
+    }
+
+    .authorWrapper {
+      @apply flex -space-x-5;
+    }
+  }
+
+  .carouselWrapper {
+    @apply w-full pb-10 px-2;
+  }
+}

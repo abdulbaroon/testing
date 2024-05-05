@@ -1,0 +1,27 @@
+.wrapper {
+    @apply max-w-screen-desktop mx-auto px-5 w-full absolute inset-0 z-30 flex justify-center items-center my-10 rounded-3xl;
+
+    .container {
+        @apply max-w-[724px] p-0 tablet:p-5 w-full text-center z-20;
+
+        .heading {
+            @apply text-44 tablet:text-84 font-medium leading-[50px] tablet:leading-[106px]
+        }
+
+        .form {
+            @apply mt-16 space-y-2 px-5 tablet:px-20;
+
+            .input {
+                @apply bg-white text-black;
+            }
+
+            .buttonWrapper {
+                @apply flex justify-center pt-6;
+            }
+        }
+    }
+
+    .bgPattern {
+        @apply absolute bottom-0 w-full h-fit rounded-b-3xl z-10;
+    }
+}

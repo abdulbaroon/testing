@@ -1,0 +1,19 @@
+.wrapper {
+    @apply bg-grey text-white rounded-2xl p-2 flex items-center;
+
+    input {
+        @apply bg-transparent border-none outline-none ring-0 h-full w-full text-lg px-2 min-h-[45px];
+    }
+
+    .action {
+        @apply py-4 px-7 bg-primary rounded-2xl;
+
+        &.rightMode {
+
+            svg {
+                @apply -scale-x-100;
+            }
+        }
+
+    }
+}

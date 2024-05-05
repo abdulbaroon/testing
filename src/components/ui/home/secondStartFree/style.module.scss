@@ -1,0 +1,38 @@
+.wrapper {
+  @apply bg-black w-full flex justify-center px-5 tablet:px-0 relative;
+
+  .background {
+    @apply absolute w-full h-full z-0 hidden tablet:block;
+  }
+
+  .mobileBackground {
+    @apply absolute w-full h-full z-0 block tablet:hidden;
+  }
+
+  .content {
+    @apply w-full h-full flex flex-col gap-10 items-center max-w-[1000px] z-10 py-60 tablet:pt-[140px] tablet:pb-[268px];
+
+    .title {
+      @apply font-semibold text-32 tablet:text-[82px] leading-[38px] tablet:leading-[100px] text-center;
+    }
+
+    .scanButton {
+      @apply font-semibold text-18 leading-6 z-20 w-full tablet:w-fit;
+      background: linear-gradient(43.3deg, #4610f9 -0.98%, #cfa5ed 96.48%);
+      border-radius: 17px;
+      background-origin: border-box;
+    }
+
+    .items {
+      @apply w-full flex flex-col tablet:flex-row gap-6 flex-wrap justify-center z-20 px-0 tablet:px-50;
+
+      .option {
+        @apply flex justify-center items-center gap-2;
+
+        .description {
+          @apply font-medium text-18 leading-6;
+        }
+      }
+    }
+  }
+}

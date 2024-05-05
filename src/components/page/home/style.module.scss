@@ -1,0 +1,11 @@
+.blackBg {
+    @apply bg-black relative;
+}
+
+.roundedTop {
+    @apply rounded-t-3xl;
+}
+
+.starBg {
+    @apply w-full h-[800px] tablet:h-[1120px] rounded-t-3xl overflow-hidden z-20;
+}

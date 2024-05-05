@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "pure-react-carousel/dist/react-carousel.es.css";
+
+
+/* Roobert Font */
+@font-face {
+  font-family: "Roobert";
+  font-weight: 300;
+  src: url("../assets/fonts/roobert/Roobert-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Roobert";
+  font-weight: 400;
+  src: url("../assets/fonts/roobert/Roobert-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Roobert";
+  font-weight: 500;
+  src: url("../assets/fonts/roobert/Roobert-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Roobert";
+  font-weight: 600;
+  src: local("Roobert-Bold"),
+  url("../assets/fonts/roobert/Roobert-SemiBold.otf") format("opentype");
+}
+
+
+@font-face {
+  font-family: "Roobert";
+  font-weight: 700;
+  src: local("Roobert-Bold"),
+  url("../assets/fonts/roobert/Roobert-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Roobert";
+  font-weight: 800;
+  src: local("Roobert-Bold"),
+  url("../assets/fonts/roobert/Roobert-Heavy.otf") format("opentype");
+}
+
+/* Assistant Font */
+
+@font-face {
+  font-family: "Assistant";
+  font-weight: 300;
+  src: url("../assets/fonts/assistant/Assistant-Light.ttf");
+}
+
+@font-face {
+  font-family: "Assistant";
+  font-weight: 400;
+  src: url("../assets/fonts/assistant/Assistant-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Assistant";
+  font-weight: 500;
+  src: url("../assets/fonts/assistant/Assistant-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Assistant";
+  font-weight: 600;
+  src: url("../assets/fonts/assistant/Assistant-SemiBold.ttf");
+}
+
+
+@font-face {
+  font-family: "Assistant";
+  font-weight: 700;
+  src: url("../assets/fonts/assistant/Assistant-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Assistant";
+  font-weight: 800;
+  src: local("Roobert-Bold"),
+  url("../assets/fonts/assistant/Assistant-ExtraBold.ttf");
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+
+body {
+  background-color: hsl(220, 21%, 95%);
+  color: white;
+}
+
+.font-roobert {
+  font-family: 'Roobert', serif !important;
+}
+
+.font-assistant {
+  font-family: 'Assistant', serif !important;
+}
+
+a {
+  cursor: pointer;
+}
+
+.slick-slide div {
+  height: 100%;
+}
+
+.slick-dots li button:before {
+  margin-top: 30px;
+  font-size: 21px !important;
+  color: #5B27F7 !important;
+}
+
+.carousel__dot-group{
+  @apply flex justify-center gap-5 mt-10;
+}
+
+.carousel__dot-group button{
+  @apply rounded-full w-5 h-5 bg-lightGrey
+}
+
+.carousel__dot-group .carousel__dot--selected {
+  @apply bg-primary;
+}
+
+
+.owl-carousel,
+.bx-wrapper { direction: ltr; }
+.owl-carousel .owl-item { direction: rtl; }
+
+.owl-dots {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.owl-dot {
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 50%;
+  background-color: #B1B1B1 !important;
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.owl-dot.active {
+  background-color: #5B27F7 !important;
+}

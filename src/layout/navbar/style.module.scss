@@ -1,0 +1,160 @@
+.header {
+    @apply py-1 tablet:py-4 px-5 fixed top-0 w-full z-50;
+
+    .wrapper {
+        @apply max-w-screen-desktop mx-auto p-1 tablet:p-13 flex items-center justify-between relative z-50 rounded-2xl;
+
+        border-radius: 16px;
+        background: rgba(6, 6, 6, 0.20);
+        backdrop-filter: blur(12px);
+    
+        &.active {
+            background-color: rgba(6, 6, 6, 0.09);
+        }
+    
+        .logo {
+            @apply mx-3 tablet:mx-0;
+
+            .logoImg {
+                @apply w-28 h-7 text-white; 
+                
+                &.active {
+                    @apply text-black;
+                }
+                
+                @screen tablet {
+                    @apply w-144 h-8;
+                }
+            }
+        }
+    
+        .navigation {
+            @apply hidden;
+    
+            @screen desktop {
+                @apply flex items-center gap-79;
+            }
+            
+            .landingNavs {
+                @apply flex items-center gap-6;
+            }
+    
+            .authNavs {
+                @apply flex items-center gap-3;
+    
+                .login {
+                    @apply py-14 px-21 text-primary text-center transition-all duration-300 rounded-xl;
+
+                    &:hover {
+                        @apply bg-secondary text-white;
+                    }
+                }
+    
+                .getProtected {
+                    @apply py-14 px-21 bg-primary rounded-xl text-center text-white;
+                }
+            }
+        }
+    
+        .mobileNavigation {
+            @apply block;
+    
+            @screen desktop {
+                @apply hidden;
+            }
+    
+            .hambugurButton {
+                @apply bg-white px-18 py-5 rounded-xl;
+    
+                svg {
+                    @apply text-primary w-6 h-3;
+    
+                    @screen tablet {
+                        @apply w-6 h-4;
+                    }
+                }
+    
+            }
+        }
+    }
+    
+    .popOver  {
+        @apply hidden z-30 bg-white pt-110 text-black w-full h-screen fixed top-0 left-0 px-5 py-3;
+
+        &.show {
+            @apply block;
+
+            @screen tablet {
+                @apply pt-144 rounded-b-2xl h-fit;
+            }
+            
+            @screen desktop {
+                @apply hidden;
+            }
+        }
+        
+        .mobile {
+            @apply block tablet:hidden;
+
+            .navLinks {
+                @apply pb-40 space-y-3 text-center;
+    
+                .navItem  {
+                    @apply text-xl cursor-pointer;
+                }
+            }
+
+            .langSwitch {
+                @apply flex justify-center;
+            }
+
+            .authNavs {
+                @apply absolute bottom-8 left-1/2 -translate-x-1/2 gap-4 text-white text-center mt-11 w-full flex flex-wrap justify-center items-center;
+    
+                .login {
+                    @apply py-14 px-21 bg-black rounded-xl min-w-[160px];
+
+                    &:hover {
+                        @apply bg-secondary text-white;
+                    }
+                }
+        
+                .getProtected {
+                    @apply py-14 px-21 bg-primary rounded-xl min-w-[160px];
+                }
+            }
+        }
+
+        .tablet {
+            @apply hidden tablet:grid desktop:hidden max-w-[780px] mx-auto grid-cols-4;
+
+            .navLinks {
+                @apply pb-40 space-y-3;
+    
+                .navItem  {
+                    @apply text-xl cursor-pointer;
+                }
+            }
+
+            .authNavs {
+                @apply text-white w-full space-y-2 px-5;
+    
+                .login {
+                    @apply py-14 px-21 bg-black rounded-xl w-fit min-w-fit;
+
+                    &:hover {
+                        @apply bg-secondary text-white;
+                    }
+                }
+        
+                .getProtected {
+                    @apply py-14 px-21 bg-primary rounded-xl w-fit min-w-fit;
+                }
+            }
+
+            .langSwitch {
+                @apply flex justify-end;
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.wrapperBorder {
+  @apply rounded-32 p-[0.5px] ;
+  background: linear-gradient(125.31deg, #B69DD4 16.02%, rgba(182, 157, 212, 0.05) 85.04%);
+
+
+  .wrapper {
+    @apply bg-black max-w-[288px] tablet:max-w-[480px] w-full max-h-[322px] tablet:max-h-[296px] h-full px-5 py-5 flex flex-col gap-5 rounded-32;
+
+    // border-image-source: linear-gradient(125.31deg, #b69dd4 16.02%, rgba(182, 157, 212, 0.05) 85.04%);
+    // border-image-slice: 1;
+    // background-origin: border-box;
+    // background-clip: content-box, border-box;
+    // border-radius: 32px;
+
+    .header {
+      @apply flex gap-3;
+
+      .image {
+        width: 48px !important;
+      }
+
+      .name {
+        @apply text-22 font-semibold leading-7;
+      }
+
+      .country {
+        @apply text-13 font-medium leading-4;
+        color: rgba(108, 117, 125, 1);
+      }
+    }
+
+    .context {
+      @apply flex flex-col gap-1;
+
+      .date {
+        @apply text-13 font-medium leading-4;
+        color: rgba(108, 117, 125, 1);
+      }
+
+      .description {
+        @apply text-18 font-medium leading-6;
+        color: rgba(215, 217, 221, 1);
+      }
+    }
+  }
+}

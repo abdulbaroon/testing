@@ -1,0 +1,88 @@
+.wrapper {
+  @apply flex flex-col tablet:flex-row gap-5 tablet:gap-8 justify-between items-center relative;
+
+  .leftSection {
+    @apply flex flex-col gap-4 ml-5 tablet:ml-0 flex-1 desktop:flex-none;
+
+    &.rightMode {
+      @apply mr-5 tablet:mr-0;
+    }
+
+    &.order {
+      @apply order-1 tablet:order-1;
+    }
+
+    &.orderNone {
+      @apply order-none;
+    }
+
+    .number {
+      @apply text-32 font-medium leading-10;
+    }
+
+    .title {
+      @apply text-30 font-medium leading-10 max-w-sm w-full;
+    }
+
+    .description {
+      @apply text-22 font-normal leading-7 text-thirdGrey max-w-[480px] xl:w-11/12 xl:pr-12 w-full;
+    }
+  }
+
+  .rightSection {
+    @apply max-w-[300px] tablet:max-w-[480px] max-h-[273px] tablet:max-h-[332px] w-full h-full ml-5 tablet:ml-0 flex justify-center flex-1 desktop:flex-none;
+    background: linear-gradient(0deg, #151517, #151517),
+      linear-gradient(110.4deg, #decfff -18.51%, rgba(53, 55, 57, 0) 18.08%, #353739 69.44%);
+
+    border: 1px solid;
+    border-radius: 32px;
+    border-image-source: linear-gradient(110.4deg, #decfff -18.51%, rgba(53, 55, 57, 0) 18.08%, #353739 69.44%);
+    border-image-slice: 1;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+
+    &.rightMode {
+      @apply mr-5 tablet:mr-0;
+    }
+
+    &.order {
+      @apply order-1 tablet:order-1;
+    }
+
+    &.orderNone {
+      @apply order-1 tablet:order-none;
+    }
+  }
+
+  .circleButton {
+    @apply absolute left-0 tablet:left-1/2 -translate-x-1/2;
+
+    &.top {
+      @apply top-2;
+    }
+
+    &.center {
+      @apply top-2 tablet:top-1/2;
+    }
+
+    &.bottom {
+      @apply tablet:bottom-0 bottom-full tablet:translate-y-1/2 translate-y-9;
+    }
+  }
+
+  .rightCircleButton {
+    @apply absolute right-0 tablet:right-1/2 translate-x-1/2;
+
+    &.top {
+      @apply top-2;
+    }
+
+    &.center {
+      @apply top-2 tablet:top-1/2;
+    }
+
+    &.bottom {
+      @apply tablet:bottom-0 bottom-full tablet:translate-y-1/2 translate-y-9;
+    }
+  }
+}

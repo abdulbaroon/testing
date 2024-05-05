@@ -1,0 +1,72 @@
+.wrapper {
+    @apply bg-black pt-16 target:pt-0 border border-black relative h-screen overflow-hidden;
+
+    .textPosition {
+        @apply h-full flex flex-col justify-center tablet:justify-start z-20;
+
+        .heroTitle {
+            @apply text-center mt-0 md:mt-12 max-w-[700px] desktop:max-w-[1100px] mx-auto px-5 leading-[38px] tablet:leading-[40px] relative z-30;
+
+            .greyArea {
+                @apply text-32 tablet:text-6xl desktop:text-[82px] leading-[38px] tablet:leading-[20px] font-bold;
+            }
+
+            .gradientArea {
+                @apply block tablet:inline text-32 tablet:text-6xl desktop:text-7xl font-bold;
+                background: linear-gradient(43deg, #4610f9 -0.98%, #cfa5ed 96.48%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        .heroDescription {
+            @apply text-lg mt-0 tablet:mt-3 z-20 relative max-w-[550px] mx-auto px-6 py-5 tablet:py-0;
+
+            p {
+                @apply text-center;
+            }
+        }
+
+        .buttonWrapper {
+            @apply mt-10 flex flex-col tablet:flex-row justify-center items-center gap-3 tablet:gap-5 relative z-20 text-18;
+
+            .button {
+                @apply mx-auto w-[212px] ;
+            }
+
+
+
+            .freeScanButtonBorder {
+                @apply rounded-xl p-[2px] z-20;
+
+                background: linear-gradient(43.3deg, #4610f9 -0.98%, #cfa5ed 96.48%),
+                    linear-gradient(38.03deg, rgba(70, 16, 249, 0) 2.8%, #cfa5ed 154.71%);
+
+                .freeScanButton {
+                    @apply w-[210px] ;
+
+                    background: linear-gradient(43.3deg, #150A38 10.98%, #593E8f 96.48%),
+                        linear-gradient(38.03deg, rgba(70, 16, 249, 0) 2.8%, #593E8f 154.71%);
+
+                }
+            }
+
+        }
+    }
+
+    .video {
+        @apply max-w-[220%] w-[220%] mx-auto -translate-x-[25%] h-72 rounded-b-3xl z-10 -mt-0 tablet:-mt-20 overflow-hidden absolute bottom-0;
+
+        @screen tablet {
+            @apply max-w-[170%] w-[170%] -translate-x-[18%] h-fit;
+        }
+
+        @screen desktop {
+            @apply max-w-full w-full -translate-x-0 h-fit;
+        }
+    }
+
+    .heroBackground {
+        @apply absolute w-[80%] h-auto opacity-60 top-1/4 left-[8%] z-1;
+    }
+}

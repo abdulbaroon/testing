@@ -1,0 +1,23 @@
+.wrapper {
+    @apply w-full mx-auto px-5 py-16 text-black relative bg-black flex justify-center;
+
+    .content {
+        @apply max-w-screen-desktop;
+
+        .background {
+            @apply absolute top-0 left-[50%] -translate-x-[50%] hidden tablet:block;
+        }
+
+        .mobileBackground {
+            @apply absolute top-0 left-[50%] -translate-x-[50%] block tablet:hidden w-full;
+        }
+
+        .heading {
+            @apply tablet:text-52 text-44 font-semibold leading-67 text-center text-white relative z-20;
+        }
+
+        .body {
+            @apply py-9 space-y-3  max-w-[820px] mx-auto  relative z-20;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.wrapper {
+  @apply bg-black py-60 tablet:py-100 overflow-hidden border border-black relative;
+
+  .videoTitle {
+    @apply text-3xl tablet:text-52 font-semibold tablet:leading-67 flex justify-center;
+  }
+
+  .videoBg {
+    @apply absolute top-0 left-0 w-full h-full;
+  }
+
+  .videoSection {
+    @apply flex justify-center w-full h-full relative my-7;
+
+    .videoMain {
+      @apply max-w-screen-desktop w-full  flex justify-center  overflow-hidden;
+
+      .video {
+        @apply h-full w-[92%] target:w-[85%]  border rounded-[32px] border-[#5D4D6D];
+      }
+
+      .playButton {
+        @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60px] tablet:w-[88px] h-[60px] tablet:h-[88px];
+      }
+    }
+  }
+}

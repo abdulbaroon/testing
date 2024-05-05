@@ -1,0 +1,104 @@
+.wrapper {
+  @apply bg-black relative w-full flex justify-center 
+  pt-[34px] pb-[18px] tablet:py-[125px] px-5 tablet:px-0 overflow-hidden rounded-b-[40px] tablet:rounded-b-[50px] min-h-[640px] h-full tablet:min-h-fit;
+
+  .background {
+    @apply absolute w-full bottom-0 hidden tablet:block;
+  }
+
+  .mobileBackground {
+    @apply absolute w-full bottom-0 block tablet:hidden;
+  }
+
+  .content {
+    .roundSection {
+      @apply hidden tablet:block;
+      .roundBottomLeft {
+        @apply absolute bottom-0 left-0;
+      }
+
+      .roundBottomRight {
+        @apply absolute bottom-0 right-0;
+      }
+
+      .roundTopLeft {
+        @apply absolute top-0 left-0;
+      }
+
+      .roundTopRight {
+        @apply absolute top-0 right-0;
+      }
+    }
+    .roundSectionMob {
+      @apply block tablet:hidden;
+      .roundBottomLeft {
+        @apply absolute bottom-0 left-0;
+      }
+
+      .roundBottomRight {
+        @apply absolute bottom-0 right-0;
+      }
+
+      .roundTopLeft {
+        @apply absolute top-0 left-0;
+      }
+
+      .roundTopRight {
+        @apply absolute top-0 right-0;
+      }
+    }
+
+    .background {
+      @apply w-full h-full;
+    }
+
+    @apply w-full h-full flex flex-col items-center relative max-w-[1000px];
+
+    .title {
+      @apply font-semibold text-32 tablet:text-[82px] leading-9 tablet:leading-[100px] text-center mt-[66px] tablet:mt-2;
+    }
+
+    .context {
+      @apply relative mt-10 tablet:mt-100 w-full;
+
+      border-image-source: linear-gradient(
+        270deg,
+        rgba(108, 117, 125, 0) 7.26%,
+        #dbccf6 49.22%,
+        rgba(108, 117, 125, 0) 92.29%
+      );
+      border-top: 1px solid;
+      border-radius: 32px;
+      border-image-slice: 1;
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+
+      .scanButton {
+        @apply font-semibold text-18 leading-6 z-20 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 tablet:w-fit w-full px-5;
+        background: linear-gradient(43.3deg, #4610f9 -0.98%, #cfa5ed 96.48%);
+        border-radius: 17px;
+        background-origin: border-box;
+      }
+
+      .roundBottom {
+        @apply hidden tablet:block;
+      }
+
+      .roundBottomMobile {
+        @apply block tablet:hidden w-full pt-5 h-full min-h-[440px];
+      }
+
+      .items {
+        @apply w-full flex flex-col tablet:flex-row gap-6 flex-wrap justify-center z-20 absolute top-10 tablet:top-24 px-0 tablet:px-50;
+
+        .option {
+          @apply flex justify-center items-center gap-2;
+
+          .description {
+            @apply font-medium text-18 leading-6;
+          }
+        }
+      }
+    }
+  }
+}

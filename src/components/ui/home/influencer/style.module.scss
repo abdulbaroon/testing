@@ -1,0 +1,27 @@
+.wrapper {
+  @apply py-60 tablet:py-100 relative bg-black;
+
+  .background {
+    @apply absolute top-0 left-0 z-10 w-full h-full;
+  }
+
+  .title {
+    @apply text-3xl tablet:text-52 font-semibold tablet:leading-67 text-center mb-60 z-20 relative;
+  }
+
+  .carouselWrapper {
+    @apply mx-4 z-20 relative;
+
+    .gridItem {
+      @apply overflow-hidden;
+
+      &.pairItem {
+        @apply mt-0 tablet:mt-11;
+      }
+
+      .image {
+        @apply w-[250px] h-[390px] rounded-2xl;
+      }
+    }
+  }
+}

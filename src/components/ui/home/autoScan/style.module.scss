@@ -1,0 +1,54 @@
+.wrapper {
+  @apply pt-50 bg-black flex justify-center w-full border border-black;
+
+  .context {
+    @apply max-w-screen-desktop w-full text-center relative;
+
+    .title {
+      @apply font-semibold text-32 tablet:text-52 leading-9 tablet:leading-3 px-5;
+    }
+
+    .description {
+      @apply font-medium text-lg my-7;
+    }
+
+    .buttonWrapper {
+      @apply flex flex-col tablet:flex-row justify-center gap-5 mt-5 items-center text-18 font-medium;
+
+      .protectButton {
+        @apply max-w-[212px]  w-full ;
+      }
+
+      .freeScanButtonBorder {
+        @apply rounded-xl p-[2px];
+
+        background: linear-gradient(43.3deg, #4610f9 -0.98%, #cfa5ed 96.48%),
+          linear-gradient(38.03deg, rgba(70, 16, 249, 0) 2.8%, #cfa5ed 154.71%);
+
+        .freeScanButton {
+          @apply w-[210px] ;
+
+          background: linear-gradient(43.3deg, #0a0322 10.98%, #593E8f 96.48%),
+            linear-gradient(38.03deg, rgba(70, 16, 249, 0) 2.8%, #593E8f 154.71%);
+
+        }
+      }
+    }
+
+    .image {
+      @apply hidden tablet:block h-[60%] w-auto mx-auto;
+    }
+
+    .imageTablet {
+      @apply flex justify-center;
+
+      .mainImageTablet {
+        @apply block tablet:hidden mt-5 pt-3 pb-12;
+      }
+    }
+
+    .backgroundImage {
+      @apply absolute bottom-0 tablet:top-[22%] left-0;
+    }
+  }
+}

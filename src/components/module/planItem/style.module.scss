@@ -1,0 +1,76 @@
+.wrapper {
+    @apply bg-white rounded-2xl p-2;
+
+    &:hover {
+        @apply ring-[3px] ring-primary transition-colors duration-200;
+
+        .header {
+            @apply rounded-2xl p-5 flex justify-between items-center;
+            background-image: linear-gradient(43deg, #4610F9 -0.98%, #CFA5ED 96.48%) !important;
+    
+            .name {
+                @apply text-3xl text-white font-medium;
+            }
+    
+            .price {
+                @apply text-lg text-white;
+    
+                .value {
+                    @apply text-3xl text-white font-medium;
+                }
+            }
+        }
+    }
+
+    .header {
+        @apply bg-lightGrey rounded-2xl p-5 flex justify-between items-center;
+
+        .name {
+            @apply text-3xl text-black font-medium;
+        }
+
+        .price {
+            @apply text-lg text-primary;
+
+            .value {
+                @apply text-3xl text-black font-medium;
+            }
+        }
+    }
+
+    .body {
+        @apply py-6 px-3 space-y-3;
+
+        .badge {
+            @apply bg-yellow px-3 mx-5 py-2 rounded-full text-black text-center;
+        }
+
+        .feature {
+            @apply flex items-start gap-4 text-lg;
+
+            .check {
+                @apply w-5 h-5 rounded-full bg-lightGrey flex-none translate-y-1 relative;
+
+                &.active {
+                    @apply bg-green;
+                }
+
+                .mark {
+                    @apply absolute left-1.5 top-0.5 bg-transparent border-r-2 border-b-2 border-white w-2 h-3 rotate-45;
+                }
+            }
+        }
+
+        .info {
+            @apply ml-9 text-[17px] leading-5;
+
+            .infoData {
+                @apply text-primary text-base ;
+            }
+        }
+    }
+
+    .button {
+        @apply w-full bg-black;
+    }
+}

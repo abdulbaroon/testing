@@ -1,0 +1,76 @@
+.wrapper {
+    @apply bg-[#202021] px-5 py-16;
+
+    .content {
+        @apply max-w-screen-desktop mx-auto flex flex-col tablet:flex-row justify-start gap-10 tablet:gap-28;
+
+        .brand {
+            @apply max-w-[260px] w-full;
+            .logo {
+                .logoImage {
+                    @apply h-11 w-48;
+                }
+            }
+
+            .slogan {
+                @apply mt-5;
+            }
+        }
+
+        .navs {
+            @apply grid grid-cols-2 gap-11 tablet:gap-16 max-w-[312px] w-full;
+
+            .navGroup {
+                @apply space-y-4;
+
+                a {
+                    @apply cursor-pointer;
+                }
+            }
+        }
+
+        .contact {
+            @apply w-full;
+
+            .touchTitle {
+                @apply text-3xl font-semibold leading-9;
+            }
+
+            .email {
+                @apply mt-4 w-full bg-[#313132];
+            }
+
+            .mediaTitle {
+                @apply mt-9 text-3xl font-medium leading-9;
+            }
+
+            .mediaGroup {
+                @apply mt-4 flex items-center gap-3;
+
+                .mediaItem {
+                    @apply w-52 h-52 p-2 rounded-xl bg-grey;
+
+                    .svg {
+                        @apply text-white;
+                    }
+                }
+            }
+        }
+    }
+}
+.bottom {
+    @apply flex justify-center;
+    background: rgba(21, 21, 23, 1);
+
+    .content {
+        @apply max-w-screen-desktop w-full flex justify-center py-10;
+
+        .copy {
+            @apply w-full flex items-center justify-between px-5 tablet:px-0;
+
+            .term {
+                @apply flex gap-4;
+            }
+        }
+    }
+}

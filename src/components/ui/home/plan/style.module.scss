@@ -1,0 +1,91 @@
+.wrapper {
+    @apply py-16 tablet:py-20 max-w-screen-desktop px-5 mx-auto text-black;
+
+    .heading {
+        @apply text-3xl tablet:text-44 font-medium text-center;
+    }
+
+    .periodWrapper {
+        @apply text-center flex justify-center mt-10;
+
+        .toggle {
+            @apply w-fit relative;
+
+            .tooltip {
+                @apply absolute z-30 flex -top-4 w-fit h-fit py-1 tablet:py-2 px-4 bg-secondary text-white rounded-full transition-all duration-300;
+
+                .saveText {
+                    @apply hidden tablet:block mr-1;
+                }
+
+                .minusText {
+                    @apply block tablet:hidden mr-1;
+                }
+
+                &.active {
+                    @apply bg-yellow text-black;
+
+                    @screen tablet {
+                        @apply bg-primary text-white;
+                    }
+                }
+
+                @screen tablet {
+                    @apply top-1/2 -translate-y-1/2 rounded-xl bg-secondary text-white;
+                }
+
+                &.rightMode {
+                    @apply left-4;
+
+                    @screen tablet {
+                        @apply -left-4 -translate-x-full;
+                    }
+                }
+
+                &.leftMode {
+                    @apply right-4;
+
+                    @screen tablet {
+                        @apply -right-4 translate-x-full;
+                    }
+                }
+            }
+        }
+    }
+
+    .slogan {
+        @apply mt-7 text-center tablet:block hidden;
+    }
+
+    .plans {
+        @apply hidden tablet:grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-4 gap-5 mt-16;
+    }
+
+    .mobilePlan {
+        @apply block tablet:hidden mt-16 py-5;
+
+        .planWrapper {
+            @apply w-[285px];
+        }
+    }
+
+    .customPlanArea {
+        @apply mt-28 flex flex-col text-center gap-10 px-0 tablet:px-24;
+
+        &.rightMode {
+            @apply text-center;
+        }
+
+        .description {
+            @apply text-3xl text-black flex-1 whitespace-pre;
+
+            .link {
+                @apply text-primary font-semibold cursor-pointer;
+            }
+        }
+
+        .button {
+            @apply flex-none h-fit mt-11 tablet:mt-0 text-18;
+        }
+    }
+}

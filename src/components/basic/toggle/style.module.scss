@@ -1,0 +1,38 @@
+.wrapper {
+    @apply flex items-center justify-center w-fit bg-lightGrey rounded-2xl p-2 relative;
+
+    .button {
+        @apply py-5 text-lg relative z-20 w-[160px] text-center;
+
+        &.active {
+            @apply text-white transition-colors duration-700 ease-in-out;
+        }
+    }
+
+    .activePanel {
+        @apply absolute bg-primary rounded-2xl w-[160px] h-[65px] z-10 transition-transform duration-200 ease-in-out;
+    }
+
+
+    &.leftMode {
+        .activePanel {
+            @apply left-2;
+
+            &.activeSecond {
+                @apply translate-x-full;
+            }
+        }
+    }
+
+
+    &.rightMode {
+        
+        .activePanel {
+            @apply right-2;
+
+            &.activeSecond {
+                @apply -translate-x-full;
+            }
+        }
+    }
+}

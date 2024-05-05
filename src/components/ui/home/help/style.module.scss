@@ -1,0 +1,7 @@
+.wrapper {
+    @apply max-w-screen-desktop mx-auto px-5 my-12 tablet:my-24 grid grid-cols-1 tablet:grid-cols-2 gap-5 relative;
+
+    .button {
+        @apply hidden desktop:block z-30 p-12 absolute bg-white left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[49px] text-4xl text-black;
+    }
+}

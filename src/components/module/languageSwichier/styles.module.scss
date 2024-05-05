@@ -1,0 +1,27 @@
+.langButton {
+    @apply bg-transparent p-2 rounded-xl w-11 h-11 transition-all duration-300;
+
+    &:hover {
+        @apply bg-grey;
+    }
+
+    .flagIcon {
+        @apply w-7 h-7;
+    }
+}
+
+.desktop {
+    @apply hidden tablet:block relative mt-1;
+
+    .popOver {
+        @apply hidden absolute bg-lightGrey rounded-xl p-2 left-1/2 -translate-x-1/2;
+
+        &.active {
+            @apply block;
+        }
+    }
+}
+
+.mobile {
+    @apply flex tablet:hidden gap-6;
+}

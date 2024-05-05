@@ -1,0 +1,6 @@
+.buttonSection {
+  @apply flex justify-center relative z-30 mt-10 gap-4;
+  .arrowButton {
+    @apply w-12 h-12 bg-[#5b27f7] rounded-xl flex justify-center items-center;
+  }
+}

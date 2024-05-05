@@ -1,0 +1,59 @@
+.wrapper {
+    @apply max-w-screen-desktop mx-auto px-5 mt-21;
+
+    .heading {
+        @apply text-44 tablet:text-84 font-semibold text-center;
+        background: linear-gradient(43deg, #4610F9 -0.98%, #CFA5ED 96.48%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .slogan {
+        @apply mt-5 text-3xl font-medium  text-center;
+    }
+
+    .buttonWrapper {
+        @apply mt-8 text-center;
+    }
+
+    .gridArea {
+        @apply grid grid-cols-1 desktop:grid-cols-2 gap-6 mt-110;
+
+        .imageWrapper {
+            @apply rounded-3xl w-full relative aspect-[1/0.6] desktop:aspect-[1/1.2];
+
+            .image {
+                @apply object-cover rounded-3xl relative z-30;
+            }
+
+            .pattern1 {
+                @apply -translate-x-[300px] z-10;
+
+                &.rightMode {
+                    @apply translate-x-[300px] -scale-x-100;
+                }
+            }
+
+            .pattern2 {
+                @apply translate-x-[300px] z-10;
+
+                &.rightMode {
+                    @apply -translate-x-[300px]  -scale-x-100;
+                }
+            }
+        }
+
+        .cards {
+            @apply w-full space-y-5 max-w-[390px] mx-auto;
+
+            .title {
+                @apply text-white text-3xl font-medium text-center desktop:text-left pb-4;
+
+                &.rightMode {
+                    @apply text-right;
+                }
+            }
+        }
+    }
+
+}

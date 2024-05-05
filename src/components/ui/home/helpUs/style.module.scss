@@ -1,0 +1,11 @@
+.wrapper {
+  @apply bg-black py-30 tablet:py-50 px-5 tablet:px-20 border border-black;
+
+  .title {
+    @apply text-3xl tablet:text-52 font-semibold tablet:leading-67 text-center mb-10 tablet:mb-60;
+  }
+
+  .cardContent {
+    @apply max-w-screen-desktop mx-auto grid grid-cols-1 tablet:grid-cols-2 gap-5 relative;
+  }
+}
