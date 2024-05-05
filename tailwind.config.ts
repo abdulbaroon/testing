@@ -38,6 +38,7 @@ const config: Config = {
         ...rem(44),
         ...rem(52),
         ...rem(84),
+        ...rem(86),
       },
       lineHeight: {
         ...rem(67),
