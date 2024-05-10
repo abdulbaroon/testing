@@ -1,92 +1,85 @@
-.topWrapper {
-    @apply  h-auto desktop:h-[500vh] relative;
+.mainWrapper {
+    @apply hidden mb-20 desktop:block h-[200vh];
 
-    .mainWrapper {
-        @apply hidden my-20 desktop:block;
+    .heading {
+        @apply text-52 text-center font-medium transition-opacity;
 
-        .heading {
-            @apply text-52 text-center font-medium transition-opacity;
-
+        .hide {
+            @apply hidden;
         }
 
-        .wrapper {
-            @apply hidden desktop:grid px-5 grid-cols-2 max-w-screen-desktop mx-auto;
+    }
 
-            .cards {
-                @apply w-full relative;
+    .wrapper {
+        @apply hidden desktop:grid px-5 grid-cols-2 max-w-screen-desktop mx-auto;
 
-                .heading {
-                    @apply text-84 font-medium transition-opacity;
+        .cards {
+            @apply w-full relative;
 
-                    .hide {
-                        @apply hidden;
-                    }
-                }
+            .cardList {
+                @apply mt-10 relative;
 
-                .cardList {
-                    @apply mt-10 relative;
+                .cardListWrapper {
+                    @apply relative;
 
-                    .cardListWrapper {
-                        @apply relative;
+                    .card {
+                        @apply absolute max-w-[400px] min-h-[192px] p-5 bg-grey rounded-xl transition-all duration-500;
 
-                        .card {
-                            @apply absolute max-w-[400px] min-h-[192px] p-5 bg-grey rounded-xl transition-all duration-500;
-
-                            &.activeCard {
-                                @apply opacity-100;
-                            }
-
-                            &.hiddenCard {
-                                @apply hidden;
-                            }
-
-                            &.disabledCard {
-                                @apply opacity-25;
-                            }
-
-                            h5 {
-                                @apply font-semibold text-xl;
-                            }
-
-                            p {
-                                @apply mt-1 text-base;
-                            }
+                        &.activeCard {
+                            @apply opacity-100;
                         }
-                    }
-                }
 
-                .progressbar {
-                    @apply absolute top-0 mt-[3rem] w-1.5 h-96 bg-grey rounded-full;
+                        &.hiddenCard {
+                            @apply hidden;
+                        }
 
-                    &.leftMode {
-                        @apply left-0;
-                    }
+                        &.disabledCard {
+                            @apply opacity-25;
+                        }
 
-                    &.rightMode {
-                        @apply right-0;
-                    }
+                        h5 {
+                            @apply font-semibold text-xl;
+                        }
 
-                    .activeBar {
-                        @apply absolute top-0 left-0 w-1.5 h-96 rounded-full transition-all duration-300;
-                        background-image: linear-gradient(43deg, #4610f9 -0.98%, #cfa5ed 96.48%);
+                        p {
+                            @apply mt-1 text-base;
+                        }
                     }
                 }
             }
 
-            .videoArea {
-                @apply relative mt-10 flex justify-end;
+            .progressbar {
+                @apply absolute top-0 mt-[3rem] w-1.5 h-80 bg-grey rounded-full;
 
-                .videowrapper {
-                    @apply sticky top-0 w-full h-[580px] ring-8 ring-grey rounded-3xl max-w-[441px] overflow-hidden;
+                &.leftMode {
+                    @apply left-0;
+                }
 
-                    .video {
-                        @apply w-auto h-auto;
-                    }
+                &.rightMode {
+                    @apply right-0;
+                }
+
+                .activeBar {
+                    @apply absolute top-0 left-0 w-1.5 rounded-full transition-all duration-300;
+                    background-image: linear-gradient(43deg, #4610f9 -0.98%, #cfa5ed 96.48%);
+                }
+            }
+        }
+
+        .videoArea {
+            @apply relative mt-10 flex justify-end;
+
+            .videowrapper {
+                @apply sticky top-0 w-[85%] h-[85%] ring-8 ring-grey rounded-3xl max-w-[441px] overflow-hidden;
+
+                .video {
+                    @apply w-auto h-auto;
                 }
             }
         }
     }
 }
+
 
 .mobileWrapper {
     @apply block desktop:hidden px-5;
