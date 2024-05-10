@@ -83,7 +83,7 @@ const IntroSection1: React.FC = () => {
     <section>
       <section id="how-we-protect" ref={hiddenRef} dir={locale === "he" ? "rtl" : "ltr"}>
         <div className={styles.mainWrapper}>
-          <h2 className={classNames(styles.heading, { [styles.hide]: active !== 0 })}>{t("feature1-title")}</h2>
+          <h2 className={classNames(styles.heading, { [styles.hide]: active !== 0 })}>{t("feature1-title-3")}</h2>
           <div className={styles.wrapper}>
             <div className={styles.cards}>
               <div className={styles.cardList} id="cards">
