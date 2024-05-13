@@ -34,8 +34,8 @@ const CustomCarousel: React.FC<Props> = ({ children, direction = "ltr", loop = f
         dots={false}
         margin={20}
         rtl={direction === "ltr" ? false : true}
-        loop={loop}
-        autoplay={loop}
+        loop={false}
+        autoplay={false}
         autoplayTimeout={3000}
         autoplayHoverPause={true}
         id={carouselId}

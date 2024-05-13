@@ -1,20 +1,32 @@
 .wrapper {
     @apply bg-white rounded-2xl p-2;
+    .btnWrapper {
+        .btn {
+            @apply hidden;
 
-    &:hover {
+            &.activeBtn {
+                @apply block text-white bg-[#B798F7] rounded-lg font-medium px-3;
+
+            }
+        }
+    }
+
+    
+
+    &.activeCard {
         @apply ring-[3px] ring-primary transition-colors duration-200;
 
         .header {
             @apply rounded-2xl p-5 flex justify-between items-center;
             background-image: linear-gradient(43deg, #4610F9 -0.98%, #CFA5ED 96.48%) !important;
-    
+
             .name {
                 @apply text-3xl text-white font-medium;
             }
-    
+
             .price {
                 @apply text-lg text-white;
-    
+
                 .value {
                     @apply text-3xl text-white font-medium;
                 }
@@ -39,7 +51,7 @@
     }
 
     .body {
-        @apply py-6 px-3 space-y-3;
+        @apply py-6 px-3 space-y-4;
 
         .badge {
             @apply bg-yellow px-3 mx-5 py-2 rounded-full text-black text-center;
@@ -62,10 +74,10 @@
         }
 
         .info {
-            @apply ml-9 text-[17px] leading-5;
+            @apply ml-9 text-lg;
 
             .infoData {
-                @apply text-primary text-base ;
+                @apply text-primary ;
             }
         }
     }

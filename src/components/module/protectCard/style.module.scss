@@ -1,8 +1,8 @@
 .context {
-  @apply max-w-screen-desktop w-[80%] flex flex-col tablet:flex-row tablet:gap-[55px] items-center rounded-[43px] 
+  @apply max-w-screen-desktop w-[96%] tablet:w-[80%] flex flex-col tablet:flex-row tablet:gap-[55px] items-center rounded-3xl tablet:rounded-[43px] 
   relative overflow-hidden;
   border: 1px solid rgba(50, 51, 55, 1);
-  background: linear-gradient(0deg, #323337, #323337), linear-gradient(0deg, #151517, #151517);
+  background: linear-gradient(0deg, #151517, #151517), linear-gradient(0deg, #151517, #151517);
 
   .background {
     @apply absolute top-0 z-10 h-full;

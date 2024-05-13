@@ -88,6 +88,7 @@ const plans = (t: TFunction<"translation", undefined>) => [
 
 const Plan = () => {
   const [plan, setPlan] = useState<string>("MONTHLY");
+  const [activeCard, setActiveCard] = useState<number>(1);
   const { locale } = useRouter();
   const { t } = useTranslation();
 
@@ -120,15 +121,32 @@ const Plan = () => {
       <p className={styles.slogan}>{t("plan-slogan")}</p>
       <div className={styles.plans}>
         {plans(t).map((item, index) => (
-          <PlanItem data={item} type={plan as "MONTHLY" | "THREE_MONTHS"} key={index} isActive={index === 2} />
+          <div key={index} onMouseEnter={() => setActiveCard(index)} onMouseLeave={() => setActiveCard(1)}>
+            <PlanItem
+              data={item}
+              type={plan as "MONTHLY" | "THREE_MONTHS"}
+              activeCard={index === activeCard}
+              isActive={index === 1}
+            />
+          </div>
         ))}
       </div>
       <div className={styles.mobilePlan}>
         <CustomCarousel direction={locale === "he" ? "rtl" : "ltr"}>
           {plans(t).map((item, index) => (
             <div key={index}>
-              <div className={styles.planWrapper}>
-                <PlanItem data={item} type={plan as "MONTHLY" | "THREE_MONTHS"} key={index} isActive={index === 2} />
+              <div
+                className={styles.planWrapper}
+                onMouseEnter={() => setActiveCard(index)}
+                onMouseLeave={() => setActiveCard(1)}
+              >
+                <PlanItem
+                  data={item}
+                  type={plan as "MONTHLY" | "THREE_MONTHS"}
+                  key={index}
+                  activeCard={index === activeCard}
+                  isActive={index === 1}
+                />
               </div>
             </div>
           ))}

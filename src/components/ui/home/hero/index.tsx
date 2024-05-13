@@ -7,7 +7,6 @@ import { EXTERNAL_LINKS } from "@/constant";
 import styles from "./style.module.scss";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
-import HeroBackground from "@/assets/img/svg/HeroBackground.svg";
 
 const Hero: React.FC = () => {
   const { locale } = useRouter();
@@ -48,7 +47,6 @@ const Hero: React.FC = () => {
           </Link>
         </div>
       </div>
-      {/* <HeroBackground className={styles.heroBackground} /> */}
     </section>
   );
 };

@@ -7,6 +7,7 @@ import Button from "@/components/basic/button";
 import styles from "./style.module.scss";
 
 type PlanItemProps = {
+  activeCard?: boolean;
   isActive?: boolean;
   type?: "MONTHLY" | "THREE_MONTHS";
   data: {
@@ -17,12 +18,15 @@ type PlanItemProps = {
   };
 };
 
-const PlanItem: React.FC<PlanItemProps> = ({ data, isActive, type }) => {
+const PlanItem: React.FC<PlanItemProps> = ({ data, isActive, type, activeCard }) => {
   const { t } = useTranslation("");
   return (
-    <div className={classNames(styles.wrapper, { [styles.active]: isActive })}>
+    <div className={classNames(styles.wrapper, { [styles.active]: isActive, [styles.activeCard]: activeCard })}>
       <div className={classNames(styles.header)}>
-        <p className={styles.name}>{data.name}</p>
+        <div className={styles.btnWrapper}>
+          <button className={classNames(styles.btn, { [styles.activeBtn]: isActive })}>Most popular</button>
+          <p className={styles.name}>{data.name}</p>
+        </div>
         <p className={styles.price}>
           <span className={styles.value}>
             {type === "THREE_MONTHS" ? data.monthlyPrice * 3 * 0.8 : data.monthlyPrice}$
