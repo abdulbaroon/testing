@@ -10,7 +10,7 @@ const IntroSection = () => {
   return (
     <div className={styles.wrapper}>
       <IntroSection1 />
-      {/* <IntroSection2 /> */}
+      <IntroSection2 />
     </div>
   );
 };

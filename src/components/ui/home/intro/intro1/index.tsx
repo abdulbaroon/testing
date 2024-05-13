@@ -83,7 +83,7 @@ const IntroSection1: React.FC = () => {
     <section>
       <section id="how-we-protect" ref={hiddenRef} dir={locale === "he" ? "rtl" : "ltr"}>
         <div className={styles.mainWrapper}>
-          <h2 className={classNames(styles.heading, { [styles.hide]: active !== 0 })}>{t("feature1-title-8")}</h2>
+          <h2 className={classNames(styles.heading, { [styles.hide]: active !== 0 })}>{t("feature1-title")}</h2>
           <div className={styles.wrapper}>
             <div className={styles.cards}>
               <div className={styles.cardList} id="cards">
@@ -115,16 +115,22 @@ const IntroSection1: React.FC = () => {
             </div>
             <div className={styles.videoArea}>
               <div className={styles.videowrapper}>
-                <video
-                  id="video-tag"
-                  muted
-                  loop
-                  autoPlay
-                  playsInline
-                  preload="auto"
-                  className={styles.video}
-                  src={`/videos/feature_${active + 1}.mp4`}
-                ></video>
+                <AnimatePresence>
+                  <motion.video
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    key={`video-tag-${active}`}
+                    id={`video-tag-${active}`}
+                    muted
+                    loop
+                    autoPlay
+                    playsInline
+                    preload="auto"
+                    src={`/videos/feature_${active + 1}.mp4`}
+                    className={styles.video}
+                  ></motion.video>
+                </AnimatePresence>
               </div>
             </div>
           </div>

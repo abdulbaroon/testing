@@ -70,7 +70,7 @@
             @apply relative mt-10 flex justify-end;
 
             .videowrapper {
-                @apply sticky top-0 w-[85%] h-[85%] ring-8 ring-grey rounded-3xl max-w-[441px] overflow-hidden;
+                @apply sticky top-0 w-full h-[580px] ring-8 ring-grey rounded-3xl max-w-[441px] overflow-hidden;
 
                 .video {
                     @apply w-auto h-auto;
